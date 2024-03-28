@@ -119,3 +119,79 @@ class Car
     def display_info
         puts "#{@year} {@make} # {@model}"
     end
+
+end
+
+my_car = Car.new("Toyota", "Camry", 2022)
+my_car.display_info
+
+
+class Shape
+    attr_accessor :color
+
+    def initialize(color)
+        @color = color
+    end
+
+    def display_color
+        puts "Color: #{@color}"
+    end
+
+end
+
+class Sqaure < Shape
+    attr_accessor :side_length
+
+    def initialize(color, side_length)
+        super(color)
+
+        @side_length = side_length
+    end
+
+    def calculate_area
+        @side_length**2
+    end
+
+end
+
+sqaure = Sqaure.new("Red", 5)
+sqaure.display_color
+puts sqaure.calculate_area
+
+#Encapsulation In Ruby
+class TemperatureSensor
+    def initialize
+        @reading = ✅✅
+    end
+
+    def add_reading(temperature)
+        validate_temperature(temperature)
+        @reading << temperature
+    end
+
+    def average_reading 
+        @reading.sum / @ reading.length.to_f
+    end
+
+    private
+
+    def validate_temperature(temperature)
+        raise "Invalid temperature" unless temperature.is_a?(Numeric)
+    end
+
+end
+
+
+sensor = TemperatureSensor.new
+sensor.add_reading(25)
+sensor.add_reading(30)
+
+puts sensor.average_reading
+
+
+
+#Mixins in Ruby
+
+module ModuleName
+    
+end
